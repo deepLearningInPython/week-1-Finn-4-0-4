@@ -1,5 +1,3 @@
-import numpy
-
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
 # Don't import additional packages. Numpy suffices.
@@ -13,7 +11,12 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(num):
+    if num > 0:
+        print(1)
+    else:
+        print(-1)
+
 
 
 # -----------------------------------------------
@@ -28,14 +31,16 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(arr, cutoff=0):
+    return [max(x, cutoff) for x in arr]
+
 
 
 # -----------------------------------------------
 
 
 # Task 3:
-# Instructions:
+# Instructions
 #Write a function that takes in a two-dimensional numpy array of size (n, p) and a one-dimensional numpy array of size p.
 #The function should start by multiplying the two numpy arrays (matrix multiplication).
 #Next, apply the ReLu function from above to the resulting matrix and return the result.
@@ -44,7 +49,9 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(arr1,arr2):
+    arr3 = arr1 @ arr2
+    return(ReLu(arr3))
 
 
 # ------------------------------------------

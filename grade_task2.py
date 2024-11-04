@@ -1,7 +1,6 @@
 import numpy as np
 from tasks import step, ReLU
 
-
 def test_relu_default_cutoff():
     array = np.array([-5, 0, 3, -2, 4])
     expected_output = np.array([0, 0, 3, 0, 4])
@@ -16,5 +15,3 @@ def test_relu_empty_array():
     array = np.array([])
     expected_output = np.array([])
     np.testing.assert_array_equal(ReLu(array.copy()), expected_output, "Failed on empty array")
-
-
